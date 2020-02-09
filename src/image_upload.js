@@ -6,7 +6,7 @@ class ImageUpload extends Component
 
     render()
     {
-        var urlstr = "https://warm-reef-48121.herokuapp.com/room_push_img/" + this.props.room_id + "/" + this.props.user
+        var urlstr = "https://partyshare-server.herokuapp.com/room_push_img/" + this.props.room_id + "/" + this.props.user
         return(
             <div id="image_upload">
                 <div id="upload">

@@ -47,7 +47,7 @@ class App extends Component
   async tryToConnect(roomid,username)
   {
     console.log(roomid)
-    var response = await fetch("https://warm-reef-48121.herokuapp.com/get_room/" + roomid)
+    var response = await fetch("https://partyshare-server.herokuapp.com/get_room/" + roomid)
          .then(resp => resp.text())
     if(response == "OK")
     {

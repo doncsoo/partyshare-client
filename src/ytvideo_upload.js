@@ -13,7 +13,6 @@ class YTUpload extends Component
     }
     render()
     {
-        var urlstr = "https://warm-reef-48121.herokuapp.com/room_push_img/" + this.props.room_id + "/" + this.props.user
         return(
             <div id="video_search">
                 <div id="search">
@@ -66,7 +65,7 @@ class YTUpload extends Component
 
     upload(videoid)
     {
-        var sendurl = "https://warm-reef-48121.herokuapp.com/room_push_video/" + this.props.room_id +"/" +
+        var sendurl = "https://partyshare-server.herokuapp.com/room_push_video/" + this.props.room_id +"/" +
         this.props.user + "/" + videoid
         fetch(sendurl, {
             method: 'POST'
