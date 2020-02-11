@@ -16,7 +16,7 @@ class ImageUpload extends Component
          <input type="file" accept="image/*" name="image" ></input>
          <input type="submit" value="upload"></input>
  </form>
-          <button id="other_button">Back</button>
+          <button id="other_button" onClick={() => this.props.returnmenu()}>Back</button>
             </div>
             </div>
         )

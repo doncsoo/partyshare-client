@@ -22,7 +22,7 @@ class YTUpload extends Component
          <input id="videotitle"></input>
          <br></br>
          <button id="other_button" onClick={() => this.searchForVideo(document.getElementById("videotitle").value)}>Search</button>
-          <button id="other_button">Back</button>
+          <button id="other_button" onClick={() => this.props.returnmenu()}>Back</button>
             </div>
             </div>
         )
