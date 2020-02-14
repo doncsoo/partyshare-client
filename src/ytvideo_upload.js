@@ -36,8 +36,24 @@ class YTUpload extends Component
         this.nextResult()
     }
 
+    failure()
+    {
+        var html_code = 
+        <div id="result">
+            <label>We couldn't find the desired video. Please try again.</label>
+            <br></br>
+            <button id="other_button" onClick={() => this.props.returnmenu()}>Back</button>
+        </div>;
+        ReactDOM.render(html_code, document.getElementById('video_search'));
+    }
+
     nextResult()
     {
+        if(this.state.curr == 30)
+        {
+            this.failure();
+            return
+        }
         var item = this.state.s_result.items[this.state.curr]
         var html_code = 
         <div id="result">
@@ -50,6 +66,8 @@ class YTUpload extends Component
             <button id="other_button" onClick={() => this.upload(item.id.videoId)}>Upload</button>
             <br></br>
             <button id="other_button" onClick={() => this.nextResult()}>Next Result</button>
+            <br></br>
+            <button id="other_button" onClick={() => this.props.returnmenu()}>Back</button>
         </div>;
         if(this.state.curr == 0)
         {
@@ -70,7 +88,13 @@ class YTUpload extends Component
         fetch(sendurl, {
             method: 'POST'
         })
-        document.getElementById("video_search").innerHTML = "<label>Your video was sent!</label>"
+        var success_html = 
+        <div id="result">
+            <label>Your video was sent!</label>
+            <br></br>
+            <button id="other_button" onClick={() => this.props.returnmenu()}>Back</button>
+        </div>;
+        ReactDOM.render(success_html, document.getElementById('video_search'));
     }
 }
 

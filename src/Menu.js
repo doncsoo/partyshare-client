@@ -2,6 +2,9 @@ import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import ImageUpload from './image_upload';
 import YTUpload from './ytvideo_upload';
+import {
+    Redirect, Router
+  } from 'react-router-dom'
 
 class Menu extends Component
 {
@@ -21,10 +24,19 @@ class Menu extends Component
         <button id="menu_button" onClick={() => this.renderImgUpload()}>Add an image</button>
         <br></br>
         <button id="menu_button" onClick={() => this.renderYTUpload()}>Add a YT video</button>
+        <br></br>
+        <button id="other_button" onClick={() => this.logOut()}>Logout</button>
         </div>
         <div id="upload_site">
         </div>
         </div>)
+    }
+
+    logOut()
+    {
+        sessionStorage.removeItem("SessionUser")
+        sessionStorage.removeItem("SessionRoom")
+        window.location.href="/"
     }
 
     returnMenu()
