@@ -51,7 +51,8 @@ class ImageUpload extends Component
         //formData.append("image",photos.files[0])
         await fetch("https://partyshare-server.herokuapp.com/room_push_img/" + this.props.room_id + "/" + this.props.user, {
             method: 'POST',
-            body: formData
+            body: formData,
+            mode: 'no-cors'
           })
           .then(function(resp)
           {
