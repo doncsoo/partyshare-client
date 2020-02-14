@@ -7,21 +7,24 @@ class ImageUpload extends Component
 
     render()
     {
+        const urlstr = "https://partyshare-server.herokuapp.com/room_push_img/" + this.props.room_id + "/" + this.props.user
         return(
             <div id="image_upload">
                 <div id="upload">
                 <h1>Upload Image</h1>
-                <form id="send_form" method="post" enctype="multipart/form-data">
+                <form action={urlstr} id="send_form" method="post" enctype="multipart/form-data">
                 <input type="file" accept="image/*" name="image"/>
+                <button type="submit" id="other_button">Send</button>
                 </form>
-                <button id="other_button" onClick={() => this.upload()}>Send</button>
                 <button id="other_button" onClick={() => this.props.returnmenu()}>Back</button>
             </div>
             </div>
         )
     }
 
-    async upload()
+    //Unworking AJAX code
+
+    /*async upload()
     {
         function success()
         {
@@ -59,7 +62,7 @@ class ImageUpload extends Component
               if(resp.status == 200) success();
               else failure();
           })   
-    }
+    }*/
 }
 
 export default ImageUpload;

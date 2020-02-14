@@ -32,6 +32,13 @@ class App extends Component
       <div>
       <h1>PartyShare</h1>
       <div id="app">
+        <Switch>
+        <Route path="/img_success">
+        <label>Upload succeeded.</label>
+        <br></br>
+        <button id="other_button" onClick={() => window.location.href="/"}>Back</button>
+        </Route>
+        <Route path="/">
         <div id="login">
         <input type="text" id="user" name="user" placeholder="Username"></input>
         <br></br>
@@ -46,6 +53,8 @@ class App extends Component
         <br></br>
         <button id="other_button" onClick={() => this.tryToConnect(this.getRoomId(room_id),document.getElementById("user").value)}>Add</button>
         </div>
+        </Route>
+        </Switch>
       </div>
       </div>
       </Router>
