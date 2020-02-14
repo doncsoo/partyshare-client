@@ -73,7 +73,7 @@ class App extends Component
 
   preAuthenticate()
   {
-    if(sessionStorage.getItem("SessionUser") && sessionStorage.getItem("SessionRoom"))
+    if(sessionStorage.getItem("SessionUser") && sessionStorage.getItem("SessionRoom") && document.getElementById("login"))
     {
       this.tryToConnect(sessionStorage.getItem("SessionRoom"),sessionStorage.getItem("SessionUser"))
     }
@@ -90,7 +90,11 @@ class App extends Component
       this.setState({user : username})
       this.saveData()
       var rem = document.getElementById("login")
-      rem.parentNode.removeChild(rem)
+      if(rem != undefined)
+      {
+        rem.parentNode.removeChild(rem)
+      } 
+      else return
       ReactDOM.render(<Menu room_id={roomid} user={username}/>,document.getElementById("app"))
     }
     else
