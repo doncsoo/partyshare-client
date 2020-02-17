@@ -14,6 +14,9 @@ class ImageUpload extends Component
                 <h1>Upload Image</h1>
                 <form action={urlstr} id="send_form" method="post" enctype="multipart/form-data">
                 <input type="file" accept="image/*" name="image"/>
+                <br></br>
+                <label>Description:</label>
+                <input type="text" name="desc"></input>
                 <button type="submit" id="other_button">Send</button>
                 </form>
                 <button id="other_button" onClick={() => this.props.returnmenu()}>Back</button>
