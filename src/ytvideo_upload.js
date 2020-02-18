@@ -33,7 +33,14 @@ class YTUpload extends Component
         var url = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=30&order=relevance&q=" + search_term + "&key=AIzaSyBxkx16j2dZPQc-ZRDACaAfwilFR5BCtRc"
         var searchresult = await fetch(url).then(res => res.json())
         this.setState({s_result : searchresult})
-        this.nextResult()
+        if(searchresult.items.length == 0)
+        {
+            this.failure()
+        }
+        else
+        {
+            this.nextResult()
+        }
     }
 
     failure()

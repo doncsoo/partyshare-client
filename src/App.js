@@ -99,7 +99,7 @@ class App extends Component
     }
     else
     {
-      document.getElementById("app").innerHTML += "<div id='errors'><h4>" + response + "</h4></div>"
+      alert("An error occurred during the log-in: " + response)
     }
   }
 
