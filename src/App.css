@@ -6,6 +6,7 @@
 
 body{
   background-image: url('bg.png');
+  -webkit-text-size-adjust: none;
 }
 
 h1, label, h3, h4{
