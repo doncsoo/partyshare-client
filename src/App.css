@@ -1,5 +1,5 @@
 @font-face {
-  font-family: 'Gotham Book'; /*a name to be used later*/
+  font-family: 'Gotham-Book'; /*a name to be used later*/
   src: url('GothamBook.ttf')
 }
 
@@ -9,19 +9,19 @@ body{
 
 h1, label, h3, h4{
   color: #ffffff;
-  font-family: 'Gotham Book';
+  font-family: Gotham-Book;
 }
 
 h4 {
   color: #ffffff;
-  font-family: 'Gotham Book';
+  font-family: Gotham-Book;
   margin-bottom: 0;
 }
 
 input#imgupload
 {
   color: #ffffff;
-  font-family: 'Gotham Book';
+  font-family: Gotham-Book;
   margin: 10px;
   padding: 15px 32px;
   border:none;
@@ -126,7 +126,7 @@ button#other_button {
   background-color:#FE9A2E;
   border-radius:3px;
   font-weight:700;
-  font-family: 'Gotham Book';
+  font-family: Gotham-Book;
   }
   .button5:hover{
   background-color:#FF8000;
