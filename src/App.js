@@ -39,7 +39,7 @@ class App extends Component
       <div id="app">
         <Switch>
         <Route path="/img_success">
-        <h3>Upload succeeded.</h3>
+        <label><b>Upload succeeded.</b></label>
         <br></br>
         <button class="button5" onClick={() => window.location.href="/"}>Back</button>
         </Route>
@@ -49,7 +49,7 @@ class App extends Component
         <br></br>
         <Switch>
         <Route path="/room/">
-        <h3>Uploading to room #{room_id}</h3>
+        <label><b>Uploading to room #{room_id}</b></label>
         </Route>
         <Route path="/">
         <input type="text" id="rid" name="rid" placeholder="Room number"></input>

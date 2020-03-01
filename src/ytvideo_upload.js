@@ -16,7 +16,8 @@ class YTUpload extends Component
         return(
             <div id="video_search">
                 <div id="search">
-                <h1>Upload YT video</h1> 
+                <label><b>Upload YT video</b></label>
+                <br></br>
         <label>Enter the video's name you wish to upload. We'll try to search it for you!</label>
         <br></br>
          <input id="videotitle"></input>
@@ -51,7 +52,7 @@ class YTUpload extends Component
     {
         var html_code = 
         <div id="result">
-            <h4>We couldn't find the desired video. Please try again.</h4>
+            <label><b>We couldn't find the desired video. Please try again.</b></label>
             <br></br>
             <button class="button5" onClick={() => this.props.returnmenu()}>Back</button>
         </div>;
@@ -70,7 +71,7 @@ class YTUpload extends Component
         <div id="result">
             <label>Do you want to send this video?</label>
             <img width="320" height="180" src={item.snippet.thumbnails.medium.url}></img>
-            <h3>{item.snippet.title}</h3>
+            <label><b>{item.snippet.title}</b></label>
             <br></br>
             <label>Uploaded by: {item.snippet.channelTitle}</label>
             <br></br>
@@ -101,7 +102,7 @@ class YTUpload extends Component
         })
         var success_html = 
         <div id="result">
-            <h4>Your video was sent!</h4>
+            <label><b>Your video was sent!</b></label>
             <br></br>
             <button class="button5" onClick={() => this.props.returnmenu()}>Back</button>
         </div>;

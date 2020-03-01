@@ -20,7 +20,8 @@ class Menu extends Component
         return(
         <div id="afterlogin">
         <div id="menu">
-        <h4>Uploading as {this.props.user} to room #{this.props.room_id}</h4>
+        <label><b>Uploading as {this.props.user} to room #{this.props.room_id}</b></label>
+        <br></br>
         <button class="button5" onClick={() => this.renderImgUpload()}>Add an image</button>
         <br></br>
         <button class="button5" onClick={() => this.renderYTUpload()}>Add a YT video</button>
