@@ -1,6 +1,7 @@
 @font-face {
-  font-family: 'Gotham-Book'; /*a name to be used later*/
-  src: url('GothamBook.ttf')
+  font-family: 'Gotham-Book';
+  font-style: normal;
+  src: url('./GothamBook.ttf')
 }
 
 body{
