@@ -1,14 +1,42 @@
+@font-face {
+  font-family: 'Gotham Book'; /*a name to be used later*/
+  src: url('GothamBook.ttf')
+}
+
 body{
-  background-color: #2b2b2b;
+  background-image: url('bg.png');
 }
 
 h1, label, h3, h4{
-  color: #707070;
+  color: #ffffff;
+  font-family: 'Gotham Book';
 }
 
 h4 {
-  color: #707070;
+  color: #ffffff;
+  font-family: 'Gotham Book';
   margin-bottom: 0;
+}
+
+input#imgupload
+{
+  color: #ffffff;
+  font-family: 'Gotham Book';
+  margin: 10px;
+  padding: 15px 32px;
+  border:none;
+  outline:none;
+  box-shadow:-4px 4px 5px 0 #feb361;
+  color:#fff;
+  font-size:14px;
+  text-shadow:0 1px rgba(0,0,0,0.4);
+  background-color:#FE9A2E;
+  border-radius:3px;
+  font-weight:700
+}
+
+div#app {
+  text-align: center;
 }
 
 div#sentby {
@@ -22,8 +50,9 @@ div#errors {
 
 img
 {
-  float: left;
-  margin: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 h2
@@ -84,3 +113,28 @@ button#other_button {
     font-size: 16px;
     border-radius: 4px;
 }
+
+.button5{
+  margin: 10px;
+  padding: 15px 32px;
+  border:none;
+  outline:none;
+  box-shadow:-4px 4px 5px 0 #feb361;
+  color:#fff;
+  font-size:14px;
+  text-shadow:0 1px rgba(0,0,0,0.4);
+  background-color:#FE9A2E;
+  border-radius:3px;
+  font-weight:700;
+  font-family: 'Gotham Book';
+  }
+  .button5:hover{
+  background-color:#FF8000;
+  cursor:pointer;
+  }
+  /*.button5:active{
+  margin-left:-4px;
+  margin-bottom:-4px;
+  padding: 15px 32px;
+  box-shadow:none
+  }*/

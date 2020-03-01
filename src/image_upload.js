@@ -12,17 +12,23 @@ class ImageUpload extends Component
             <div id="image_upload">
                 <div id="upload">
                 <h1>Upload Image</h1>
-                <form action={urlstr} id="send_form" method="post" enctype="multipart/form-data">
-                <input type="file" accept="image/*" name="image"/>
+                <form onSubmit={() => this.loadingAnim()} action={urlstr} id="send_form" method="post" enctype="multipart/form-data">
+                <input id="imgupload" type="file" accept="image/*" name="image"/>
                 <br></br>
                 <label>Description:</label>
                 <input type="text" name="desc"></input>
-                <button type="submit" id="other_button">Send</button>
+                <button type="submit" class="button5">Send</button>
                 </form>
-                <button id="other_button" onClick={() => this.props.returnmenu()}>Back</button>
+                <button class="button5" onClick={() => this.props.returnmenu()}>Back</button>
             </div>
             </div>
         )
+    }
+
+    loadingAnim()
+    {
+        document.getElementById("app").style.display = "none";
+        document.getElementById("loading").style.display = "block";
     }
 
     //Unworking AJAX code

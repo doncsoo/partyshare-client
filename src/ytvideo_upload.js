@@ -21,8 +21,8 @@ class YTUpload extends Component
         <br></br>
          <input id="videotitle"></input>
          <br></br>
-         <button id="other_button" onClick={() => this.searchForVideo(document.getElementById("videotitle").value)}>Search</button>
-          <button id="other_button" onClick={() => this.props.returnmenu()}>Back</button>
+         <button class="button5" onClick={() => this.searchForVideo(document.getElementById("videotitle").value)}>Search</button>
+          <button class="button5" onClick={() => this.props.returnmenu()}>Back</button>
             </div>
             </div>
         )
@@ -30,6 +30,8 @@ class YTUpload extends Component
 
     async searchForVideo(search_term)
     {
+        document.getElementById("app").style.display = "none";
+        document.getElementById("loading").style.display = "block";
         var url = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=30&order=relevance&q=" + search_term + "&key=AIzaSyBxkx16j2dZPQc-ZRDACaAfwilFR5BCtRc"
         var searchresult = await fetch(url).then(res => res.json())
         this.setState({s_result : searchresult})
@@ -41,15 +43,17 @@ class YTUpload extends Component
         {
             this.nextResult()
         }
+        document.getElementById("app").style.display = "block";
+        document.getElementById("loading").style.display = "none";
     }
 
     failure()
     {
         var html_code = 
         <div id="result">
-            <label>We couldn't find the desired video. Please try again.</label>
+            <h4>We couldn't find the desired video. Please try again.</h4>
             <br></br>
-            <button id="other_button" onClick={() => this.props.returnmenu()}>Back</button>
+            <button class="button5" onClick={() => this.props.returnmenu()}>Back</button>
         </div>;
         ReactDOM.render(html_code, document.getElementById('video_search'));
     }
@@ -70,11 +74,11 @@ class YTUpload extends Component
             <br></br>
             <label>Uploaded by: {item.snippet.channelTitle}</label>
             <br></br>
-            <button id="other_button" onClick={() => this.upload(item.id.videoId)}>Upload</button>
+            <button class="button5" onClick={() => this.upload(item.id.videoId)}>Send</button>
             <br></br>
-            <button id="other_button" onClick={() => this.nextResult()}>Next Result</button>
+            <button class="button5" onClick={() => this.nextResult()}>Next Result</button>
             <br></br>
-            <button id="other_button" onClick={() => this.props.returnmenu()}>Back</button>
+            <button class="button5" onClick={() => this.props.returnmenu()}>Back</button>
         </div>;
         if(this.state.curr == 0)
         {
@@ -97,9 +101,9 @@ class YTUpload extends Component
         })
         var success_html = 
         <div id="result">
-            <label>Your video was sent!</label>
+            <h4>Your video was sent!</h4>
             <br></br>
-            <button id="other_button" onClick={() => this.props.returnmenu()}>Back</button>
+            <button class="button5" onClick={() => this.props.returnmenu()}>Back</button>
         </div>;
         ReactDOM.render(success_html, document.getElementById('video_search'));
     }

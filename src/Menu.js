@@ -21,11 +21,11 @@ class Menu extends Component
         <div id="afterlogin">
         <div id="menu">
         <h4>Uploading as {this.props.user} to room #{this.props.room_id}</h4>
-        <button id="menu_button" onClick={() => this.renderImgUpload()}>Add an image</button>
+        <button class="button5" onClick={() => this.renderImgUpload()}>Add an image</button>
         <br></br>
-        <button id="menu_button" onClick={() => this.renderYTUpload()}>Add a YT video</button>
+        <button class="button5" onClick={() => this.renderYTUpload()}>Add a YT video</button>
         <br></br>
-        <button id="other_button" onClick={() => this.logOut()}>Logout</button>
+        <button class="button5" onClick={() => this.logOut()}>Logout</button>
         </div>
         <div id="upload_site">
         </div>

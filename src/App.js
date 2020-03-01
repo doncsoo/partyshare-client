@@ -7,6 +7,8 @@ import {
   Switch,
   Route
 } from 'react-router-dom'
+import logo from './partysharelogo.png';
+import loading from './loading.gif';
 
 class App extends Component 
 {
@@ -30,13 +32,16 @@ class App extends Component
     return(
       <Router>
       <div>
-      <h1>PartyShare</h1>
+      <img id="logo" width="400" height="230" src={logo} alt="Logo"></img>
+      <div id="loading" style={{display:"none"}}>
+      <img id="loading" width="100" height="100" src={loading} alt="Loading"></img>
+      </div>
       <div id="app">
         <Switch>
         <Route path="/img_success">
-        <label>Upload succeeded.</label>
+        <h3>Upload succeeded.</h3>
         <br></br>
-        <button id="other_button" onClick={() => window.location.href="/"}>Back</button>
+        <button class="button5" onClick={() => window.location.href="/"}>Back</button>
         </Route>
         <Route path="/">
         <div id="login">
@@ -51,7 +56,7 @@ class App extends Component
         </Route>
         </Switch>
         <br></br>
-        <button id="other_button" onClick={() => this.tryToConnect(this.getRoomId(room_id),document.getElementById("user").value)}>Add</button>
+        <button class="button5" onClick={() => this.tryToConnect(this.getRoomId(room_id),document.getElementById("user").value)}>Enter</button>
         </div>
         </Route>
         </Switch>
@@ -81,7 +86,13 @@ class App extends Component
 
   async tryToConnect(roomid,username)
   {
-    console.log(roomid)
+    if(roomid == '' && username == '')
+    {
+      alert("Please fill out the details to connect to the room.")
+      return
+    }
+    document.getElementById("app").style.display = "none";
+    document.getElementById("loading").style.display = "block";
     var response = await fetch("https://partyshare-server.herokuapp.com/get_room/" + roomid)
          .then(resp => resp.text())
     if(response == "OK")
@@ -101,6 +112,8 @@ class App extends Component
     {
       alert("An error occurred during the log-in: " + response)
     }
+    document.getElementById("app").style.display = "block";
+    document.getElementById("loading").style.display = "none";
   }
 
   saveData()
