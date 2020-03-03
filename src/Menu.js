@@ -20,11 +20,11 @@ class Menu extends Component
         return(
         <div id="afterlogin">
         <div id="menu">
-        <label><b>Uploading as {this.props.user} to room #{this.props.room_id}</b></label>
+        <label>Uploading as <b>{this.props.user}</b> to room <b>#{this.props.room_id}</b></label>
         <br></br>
-        <button class="button5" onClick={() => this.renderImgUpload()}>Add an image</button>
+        <button class="button5 buttonpic" onClick={() => this.renderImgUpload()}>Add an image</button>
         <br></br>
-        <button class="button5" onClick={() => this.renderYTUpload()}>Add a YT video</button>
+        <button class="button5 buttonytvideo" onClick={() => this.renderYTUpload()}>Add a YT video</button>
         <br></br>
         <button class="button5" onClick={() => this.logOut()}>Logout</button>
         </div>

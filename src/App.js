@@ -32,7 +32,7 @@ class App extends Component
     return(
       <Router>
       <div>
-      <img id="logo" width="400" height="230" src={logo} alt="Logo"></img>
+      <img id="logo" width="350" height="200" src={logo} alt="Logo"></img>
       <div id="loading" style={{display:"none"}}>
       <img id="loading" width="100" height="100" src={loading} alt="Loading"></img>
       </div>
@@ -45,14 +45,14 @@ class App extends Component
         </Route>
         <Route path="/">
         <div id="login">
-        <input type="text" id="user" name="user" placeholder="Username"></input>
+        <input class="userinput" type="text" id="user" name="user" placeholder="Username"></input>
         <br></br>
         <Switch>
         <Route path="/room/">
         <label><b>Uploading to room #{room_id}</b></label>
         </Route>
         <Route path="/">
-        <input type="text" id="rid" name="rid" placeholder="Room number"></input>
+        <input class="userinput" type="text" id="rid" name="rid" placeholder="Room number"></input>
         </Route>
         </Switch>
         <br></br>

@@ -15,8 +15,8 @@ class ImageUpload extends Component
                 <form onSubmit={() => this.loadingAnim()} action={urlstr} id="send_form" method="post" enctype="multipart/form-data">
                 <input id="imgupload" type="file" accept="image/*" name="image"/>
                 <br></br>
-                <label>Description:</label>
-                <input type="text" name="desc"></input>
+                <label>Caption:</label>
+                <input class="userinput" type="text" name="desc"></input>
                 <button type="submit" class="button5">Send</button>
                 </form>
                 <button class="button5" onClick={() => this.props.returnmenu()}>Back</button>

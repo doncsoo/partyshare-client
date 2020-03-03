@@ -20,6 +20,7 @@ label {
   font-family: Gotham-Book !important;
 }
 
+/*h1-4 not working in webkit (safari and ios browsers) */
 h1, h2, h3, h4{
   color: #ffffff;
   font-family: Gotham-Bold !important;
@@ -92,33 +93,6 @@ div#queue {
   background-color: #e0e0eb;
 }
 
-button#menu_button {
-    background-color: #707070; /* Green */
-    width: 200px;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    border-radius: 4px;
-  
-}
-
-button#other_button {
-  margin: 10px;
-  background-color: #707070; /* Green */
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    border-radius: 4px;
-}
-
 .button5{
   margin: 10px;
   padding: 15px 32px;
@@ -137,9 +111,45 @@ button#other_button {
   background-color:#FF8000;
   cursor:pointer;
   }
-  /*.button5:active{
-  margin-left:-4px;
-  margin-bottom:-4px;
-  padding: 15px 32px;
-  box-shadow:none
-  }*/
+
+  .buttonytvideo{
+    width: 300px;
+    text-align: right;
+    background-image: url(videologo.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 48px;
+    }
+    .buttonytvideo:hover{
+    background-color:#FF8000;
+    cursor:pointer;
+    }
+    .buttonpic{
+      width: 300px;
+      text-align: right;
+      background-image: url(image.png);
+      background-repeat: no-repeat;
+      background-position: left;
+      background-size: 48px;
+      }
+      .buttonpic:hover{
+      background-color:#FF8000;
+      cursor:pointer;
+      }
+
+.userinput
+{
+  width: 200px;
+  height: 40px;
+  border-radius: 8px;
+  font-family: Gotham-Book !important;
+  font-size: 20px;
+}
+.videoinput
+{
+  width: 400px;
+  height: 40px;
+  border-radius: 8px;
+  font-family: Gotham-Book !important;
+  font-size: 20px;
+}

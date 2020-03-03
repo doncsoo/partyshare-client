@@ -20,7 +20,7 @@ class YTUpload extends Component
                 <br></br>
         <label>Enter the video's name you wish to upload. We'll try to search it for you!</label>
         <br></br>
-         <input id="videotitle"></input>
+         <input class="videoinput" id="videotitle"></input>
          <br></br>
          <button class="button5" onClick={() => this.searchForVideo(document.getElementById("videotitle").value)}>Search</button>
           <button class="button5" onClick={() => this.props.returnmenu()}>Back</button>
@@ -76,7 +76,6 @@ class YTUpload extends Component
             <label>Uploaded by: {item.snippet.channelTitle}</label>
             <br></br>
             <button class="button5" onClick={() => this.upload(item.id.videoId)}>Send</button>
-            <br></br>
             <button class="button5" onClick={() => this.nextResult()}>Next Result</button>
             <br></br>
             <button class="button5" onClick={() => this.props.returnmenu()}>Back</button>
