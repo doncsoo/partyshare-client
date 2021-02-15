@@ -33,7 +33,7 @@ class YTUpload extends Component
     {
         document.getElementById("app").style.display = "none";
         document.getElementById("loading").style.display = "block";
-        var url = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=30&order=relevance&q=" + search_term + "&key=AIzaSyBxkx16j2dZPQc-ZRDACaAfwilFR5BCtRc"
+        var url = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=30&order=relevance&q=" + search_term + "&key=AIzaSyC3klBeG4FWXEY53ooMcduNzDxakdalv54"
         var searchresult = await fetch(url).then(res => res.json())
         this.setState({s_result : searchresult})
         if(searchresult.items.length == 0)
